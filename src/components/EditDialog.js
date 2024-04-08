@@ -29,7 +29,7 @@ const EditDialog = () => {
     };
     const updateTask = () => {
         const newTasks = tasks.map(e => {
-            if (e?.id === editItem?.id) { e.message = message }
+            if (e?.id === editItem?.id) { return e.message = message }
             return e;
         })
         setTasks(newTasks)
